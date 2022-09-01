@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
 
+import '../errors/errors.dart';
 import '../entities/feed_entity.dart';
 
 abstract class FeedRepository {
-  Future<Either<Exception, List<FeedEntity>>> getFeed();
+  Future<Either<Failure, List<FeedEntity>>> getFeed();
 }
