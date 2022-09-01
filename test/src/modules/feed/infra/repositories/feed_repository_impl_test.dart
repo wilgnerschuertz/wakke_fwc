@@ -46,5 +46,14 @@ void main() {
       // asset
       expect(result.fold(id, id), isA<EmptyListError>());
     });
+
+    test('Should return of list null', () async {
+      // arrange
+      when(_datasource.getFeeds()).thenThrow((_) async => null);
+      // act
+      var result = await sut.getFeed();
+      // asset
+      expect(result.fold(id, id), isA<NullListError>());
+    });
   });
 }
