@@ -56,6 +56,9 @@ class MockFeedEntity extends _i1.Mock implements _i6.FeedEntity {
   }
 
   @override
+  String get id =>
+      (super.noSuchMethod(Invocation.getter(#id), returnValue: '') as String);
+  @override
   bool get private =>
       (super.noSuchMethod(Invocation.getter(#private), returnValue: false)
           as bool);

@@ -1,13 +1,11 @@
 import 'package:equatable/equatable.dart';
 
 class FeedEntity extends Equatable {
-  final String _id;
+  final String id;
   final bool private;
 
-  const FeedEntity(this._id, this.private);
+  const FeedEntity(this.id, this.private);
 
   @override
-  List<Object> get props {
-    return [_id, private];
-  }
+  List<Object> get props => [id, private];
 }
