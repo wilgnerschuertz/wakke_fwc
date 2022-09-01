@@ -17,8 +17,10 @@ dependencies:
   dartz: ^0.10.1
   faker: ^2.0.0
   build_runner: any
+
   mockito: ^5.3.0
   dio: ^4.0.6
+  freezed: ^2.1.0+1
 
   
   cupertino_icons: ^1.0.2
@@ -32,6 +34,11 @@ dev_dependencies:
 flutter:
   
   uses-material-design: true
+
+  assets:
+   - assets/
+   - assets/mocks/
+   - assets/mocks/success/
 
   
   
