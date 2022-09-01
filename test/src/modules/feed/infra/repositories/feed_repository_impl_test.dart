@@ -35,16 +35,16 @@ void main() {
       // asset
       expect(result.fold(id, id), isA<List<FeedModel>>());
     });
-  });
 
-  test('Should return of list empty', () async {
-    // arrange
-    when(_datasource.getFeeds()).thenAnswer(
-      (_) async => <FeedModel>[],
-    );
-    // act
-    var result = await sut.getFeed();
-    // asset
-    expect(result.fold(id, id), isA<EmptyListError>());
+    test('Should return of list empty', () async {
+      // arrange
+      when(_datasource.getFeeds()).thenAnswer(
+        (_) async => <FeedModel>[],
+      );
+      // act
+      var result = await sut.getFeed();
+      // asset
+      expect(result.fold(id, id), isA<EmptyListError>());
+    });
   });
 }
