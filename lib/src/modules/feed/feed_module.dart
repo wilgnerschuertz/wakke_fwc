@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'external/datasource/feed_datasources_impl.dart';
-import 'feed_controller.dart';
-import 'feed_page.dart';
+import 'presentation/controllers/feed_controller.dart';
+import 'presentation/pages/feed_page.dart';
 import 'infra/datasource/feed_datasource.dart';
 import 'domain/repositories/feed_repository.dart';
 import 'domain/usecases/get_feed_usecase.dart';

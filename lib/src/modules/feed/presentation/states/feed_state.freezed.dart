@@ -19,21 +19,21 @@ mixin _$FeedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<FeedEntity> success) success,
     required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
     required TResult orElse(),
   }) =>
@@ -117,7 +117,7 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<FeedEntity> success) success,
     required TResult Function() error,
   }) {
     return loading();
@@ -127,7 +127,7 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
   }) {
     return loading?.call();
@@ -137,7 +137,7 @@ class _$_Loading implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
     required TResult orElse(),
   }) {
@@ -191,6 +191,7 @@ abstract class _$$_SuccessCopyWith<$Res> {
   factory _$$_SuccessCopyWith(
           _$_Success value, $Res Function(_$_Success) then) =
       __$$_SuccessCopyWithImpl<$Res>;
+  $Res call({List<FeedEntity> success});
 }
 
 /// @nodoc
@@ -201,57 +202,84 @@ class __$$_SuccessCopyWithImpl<$Res> extends _$FeedStateCopyWithImpl<$Res>
 
   @override
   _$_Success get _value => super._value as _$_Success;
+
+  @override
+  $Res call({
+    Object? success = freezed,
+  }) {
+    return _then(_$_Success(
+      success == freezed
+          ? _value._success
+          : success // ignore: cast_nullable_to_non_nullable
+              as List<FeedEntity>,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$_Success implements _Success {
-  const _$_Success();
+  const _$_Success(final List<FeedEntity> success) : _success = success;
+
+  final List<FeedEntity> _success;
+  @override
+  List<FeedEntity> get success {
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_success);
+  }
 
   @override
   String toString() {
-    return 'FeedState.success()';
+    return 'FeedState.success(success: $success)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Success);
+        (other.runtimeType == runtimeType &&
+            other is _$_Success &&
+            const DeepCollectionEquality().equals(other._success, _success));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_success));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      __$$_SuccessCopyWithImpl<_$_Success>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<FeedEntity> success) success,
     required TResult Function() error,
   }) {
-    return success();
+    return success(this.success);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
   }) {
-    return success?.call();
+    return success?.call(this.success);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success();
+      return success(this.success);
     }
     return orElse();
   }
@@ -292,7 +320,12 @@ class _$_Success implements _Success {
 }
 
 abstract class _Success implements FeedState {
-  const factory _Success() = _$_Success;
+  const factory _Success(final List<FeedEntity> success) = _$_Success;
+
+  List<FeedEntity> get success;
+  @JsonKey(ignore: true)
+  _$$_SuccessCopyWith<_$_Success> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -334,7 +367,7 @@ class _$_Error implements _Error {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() loading,
-    required TResult Function() success,
+    required TResult Function(List<FeedEntity> success) success,
     required TResult Function() error,
   }) {
     return error();
@@ -344,7 +377,7 @@ class _$_Error implements _Error {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
   }) {
     return error?.call();
@@ -354,7 +387,7 @@ class _$_Error implements _Error {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loading,
-    TResult Function()? success,
+    TResult Function(List<FeedEntity> success)? success,
     TResult Function()? error,
     required TResult orElse(),
   }) {

@@ -1,5 +1,6 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:wakke_fwc/main.dart';
+import 'modules/feed/feed_module.dart';
+import 'modules/splash/presentation/pages/splash_page.dart';
 
 class AppModule extends Module {
   @override
@@ -7,6 +8,10 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-        ChildRoute('/', child: (context, args) => HomePage()),
+        ChildRoute(
+          Modular.initialRoute,
+          child: (_, args) => const SplashPage(),
+        ),
+        ModuleRoute('/feed/', module: FeedModule()),
       ];
 }

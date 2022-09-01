@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
 import 'package:wakke_fwc/src/modules/feed/domain/errors/errors.dart';
 
@@ -14,7 +16,11 @@ class FeedDatasourceImpl implements FeedDatasource {
         'https://raw.githubusercontent.com/wilgnerschuertz/apiTESTE/main/data.json');
 
     if (response.statusCode == 200) {
-      return (response as List).map((e) => FeedModel.fromMap(e)).toList();
+      // return (response as List).map((e) => FeedModel.fromMap(e)).toList();
+
+      return (jsonDecode(response.data) as List)
+          .map((e) => FeedModel.fromMap(e))
+          .toList();
     }
 
     return throw Failure();

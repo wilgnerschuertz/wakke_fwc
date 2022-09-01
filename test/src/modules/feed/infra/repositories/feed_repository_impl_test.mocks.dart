@@ -2,7 +2,7 @@
 // in wakke_fwc/test/src/modules/feed/infra/repositories/feed_repository_impl_test.dart.
 // Do not manually edit this file.
 
-// ignore_for_file: no_leading_underscores_for_library_prefixes
+// ignore_for_file: no_leading_underscores_for_library_prefixes, must_be_immutable
 import 'dart:async' as _i3;
 
 import 'package:mockito/mockito.dart' as _i1;

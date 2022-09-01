@@ -35,10 +35,10 @@ flutter:
   
   uses-material-design: true
 
-  assets:
-   - assets/
-   - assets/mocks/
-   - assets/mocks/success/
+  # assets:
+  #  - assets/
+  #  - assets/mocks/
+  #  - assets/mocks/success/
 
   
   
