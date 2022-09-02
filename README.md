@@ -26,21 +26,18 @@ Wakke Fun é um projeto desenvolvido em Flutter/Dart que tem como objetivo exemp
 As imagens abaixo mostram as principais telas do aplicativo.
 
 <figure align="center">
-  <img src="" alt="Layout do aplicativo">
+  <img src="" alt="Tela Inicial">
   <figcaption>Principais telas do aplicativo</figcaption>
 </figure>
 
-<br>
-<br>
-
 <figure align="center">
-  <img src="" alt="Layout do aplicativo">
+  <img src="" alt="Tela de Detalhe">
   <figcaption>Principais telas do aplicativo</figcaption>
 </figure>
 
 ## 📱 Apk
 
-<span> <a href="https://drive.google.com/file/d/1Z_4pJOQqSpl6Q2Udr9h7qbPPNNUIuSL3/view?usp=sharing"> Clique aqui para baixar o aplicativo </a> </span>
+<span> <a href="">APK Download</a> </span>
 
 ---
 ## 🛠 Tecnologias
