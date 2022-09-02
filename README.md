@@ -1,7 +1,6 @@
 # Wakke Fun
 
-[![wakatime](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/83bf736b-45db-49d6-895f-4e066ea60ed9.svg)](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/83bf736b-45db-49d6-895f-4e066ea60ed9)
-
+[![wakatime](https://wakatime.com/badge/user/6ee6eb5e-5e1e-4472-8f69-a5496b25fd3c/project/e9772238-cb01-4ade-a7a0-81e51efa57d1.svg)](https://wakatime.com/badge/user/6ee6eb5e-5e1e-4472-8f69-a5496b25fd3c/project/e9772238-cb01-4ade-a7a0-81e51efa57d1)
 
 Tabela de conteúdos
 =================
