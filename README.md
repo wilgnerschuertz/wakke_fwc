@@ -1,7 +1,7 @@
 # Wakke Fun
 
 [![wakatime](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/83bf736b-45db-49d6-895f-4e066ea60ed9.svg)](https://wakatime.com/badge/user/16c43c19-b8cc-47b4-8504-d9db3204dc71/project/83bf736b-45db-49d6-895f-4e066ea60ed9)
-<img alt="Flutter" src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" />
+
 
 Tabela de conteúdos
 =================
