@@ -4,21 +4,23 @@ class FeedEntity extends Equatable {
   final String id;
   final bool private;
   final String name;
-  // final String avatar;
   final String photo;
-  final String title;
   final String image;
   final String description;
+  final String title;
+  final int comments;
+  final int notes;
 
   const FeedEntity({
     required this.id,
     required this.private,
     required this.name,
-    // required this.avatar,
     required this.photo,
-    required this.title,
     required this.image,
     required this.description,
+    required this.comments,
+    required this.title,
+    required this.notes,
   });
 
   @override
@@ -26,10 +28,11 @@ class FeedEntity extends Equatable {
         id,
         private,
         name,
-        // avatar,
+        comments,
         photo,
-        title,
         image,
         description,
+        title,
+        notes,
       ];
 }

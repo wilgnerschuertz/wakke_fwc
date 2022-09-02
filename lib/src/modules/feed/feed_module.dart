@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:wakke_fwc/src/modules/feed/presentation/pages/feed_detail.dart';
 import 'external/datasource/feed_datasources_impl.dart';
 import 'presentation/controllers/feed_controller.dart';
 import 'presentation/pages/feed_page.dart';
@@ -27,6 +28,11 @@ class FeedModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-        ChildRoute(Modular.initialRoute, child: ((_, args) => const FeedPage()))
+        ChildRoute(Modular.initialRoute,
+            child: ((_, args) => const FeedPage())),
+        ChildRoute('/detail',
+            child: ((_, args) => FeedDetailPage(
+                  feed: args.data,
+                ))),
       ];
 }

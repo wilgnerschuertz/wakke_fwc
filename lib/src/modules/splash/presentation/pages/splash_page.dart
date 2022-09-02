@@ -12,7 +12,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   void initState() {
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 1),
       () => Modular.to.pushNamed('/feed'),
     );
     super.initState();
@@ -21,7 +21,7 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: Colors.red,
+      // backgroundColor: Colors.red,
       body: Center(child: CircularProgressIndicator()),
     );
   }
